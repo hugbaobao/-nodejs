@@ -10,6 +10,7 @@ const config = require('../config')
 // 留言处理函数
 exports.Message = (req,res)=>{
 const userinfo = req.body
+console.log(userinfo);
 if(!userinfo.phone){
  return res.cc('联系方式不能为空！')
 }

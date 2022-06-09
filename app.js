@@ -12,6 +12,10 @@ const joi = require('joi')
 // 将cors注册为全局中间件
 app.use(cors())
 
+// 实现对post参数的解析防止req.body拿到空对象
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
+
 // 配置解析表单数据的中间件
 app.use(express.urlencoded({extended:false}))
 
